@@ -1,8 +1,8 @@
-# DupeFinder
+<h1 align="center">DupeFinder</h1>
 
-Fast file deduplication and disk space analyzer for Windows, Linux and macOS.
+<p align="center"><em>Fast file deduplication and disk space analyzer for Windows, Linux, and macOS.</em></p>
 
-## Description
+
 
 DupeFinder scans directories to identify duplicate files using cryptographic hashes. It supports multiple hash algorithms, configurable file filters, and various actions including reporting, deleting, hardlinking, or moving duplicate files.
 
