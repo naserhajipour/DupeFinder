@@ -1,0 +1,28 @@
+scan:
+  min_size: 1
+  max_size: 0
+  follow_symlinks: false
+  include_hidden: false
+  extensions: []
+  exclude_dirs:
+    - .git
+    - .svn
+    - node_modules
+    - __pycache__
+    - .cache
+    - vendor
+
+hash:
+  algorithm: SHA256
+  chunk_size: 65536
+  quick_hash: true
+
+output:
+  format: text
+  color: true
+  verbose: false
+
+actions:
+  dry_run: true
+  backup: true
+  backup_dir: ""

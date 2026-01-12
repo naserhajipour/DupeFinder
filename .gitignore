@@ -1,0 +1,50 @@
+# Perl
+/blib/
+/_build/
+/local/
+/cover_db/
+/nytprof/
+/nytprof.out
+/pod2htm*.tmp
+/pm_to_blib
+/Makefile
+/Makefile.old
+/Build
+/Build.bat
+/META.yml
+/META.json
+/MYMETA.yml
+/MYMETA.json
+*.o
+*.bs
+*.c
+*.bundle
+*.so
+
+# Distribution
+*.tar.gz
+*.tar.bz2
+*.zip
+
+# Project specific
+/report.json
+/report.yaml
+/report.csv
+/report.txt
+/.dupefinder_backup/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Trash-1000/

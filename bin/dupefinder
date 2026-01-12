@@ -1,0 +1,53 @@
+#!/usr/bin/env perl
+
+use v5.32;
+use strict;
+use warnings;
+use FindBin qw($RealBin);
+use lib "$RealBin/../lib";
+
+use DupeFinder::CLI;
+
+exit DupeFinder::CLI->new->run(@ARGV);
+
+__END__
+
+=head1 NAME
+
+dupefinder - Find and manage duplicate files
+
+=head1 SYNOPSIS
+
+    dupefinder [OPTIONS] DIRECTORY...
+
+=head1 OPTIONS
+
+    -c, --config FILE      Config file (YAML)
+    -o, --output FILE      Output file for report
+    -f, --format FORMAT    Output format: text, json, yaml, csv
+    -v, --verbose          Verbose output
+    -q, --quiet            Suppress progress messages
+    -C, --no-color         Disable colored output
+    -n, --dry-run          Dry run mode (default)
+    -N, --no-dry-run       Execute file operations
+    -m, --min-size SIZE    Minimum file size in bytes
+    -M, --max-size SIZE    Maximum file size in bytes
+    -e, --extensions EXT   Comma-separated file extensions
+    -a, --algorithm ALGO   Hash algorithm: MD5, SHA1, SHA256, SHA512
+    -A, --action ACTION    Action: report, delete, hardlink, move
+    -k, --keep WHICH       Keep first or last file
+    -d, --move-dir DIR     Destination for moved duplicates
+    -h, --help             Show help
+    -V, --version          Show version
+
+=head1 EXAMPLES
+
+    dupefinder /home/user/documents
+    dupefinder -f json -o report.json /data
+    dupefinder -A delete -N /tmp/downloads
+
+=head1 LICENSE
+
+Apache License 2.0
+
+=cut
